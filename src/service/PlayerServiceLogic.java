@@ -4,10 +4,7 @@ import inventory.Inventory;
 import item.Item;
 import item.ball.Ball;
 import life.player.Player;
-import life.pokemon.Ggobugi;
-import life.pokemon.Pikachu;
-import life.pokemon.Pokemon;
-import life.pokemon.Pyree;
+import life.pokemon.*;
 import shop.Shop;
 
 import java.util.ArrayList;
@@ -538,9 +535,13 @@ public class PlayerServiceLogic implements PlayerService {
 
     private Pokemon randomCreature(){
         List<Pokemon> creatures = new ArrayList<>();
-        creatures.add(new Pikachu());
-        creatures.add(new Ggobugi());
-        creatures.add(new Pyree());
+        creatures.add(new Yeesanghaesee());
+        creatures.add(new Peezon());
+        creatures.add(new Poorin());
+        creatures.add(new Ggomadol());
+        creatures.add(new Chicorita());
+        creatures.add(new Jammanbo());
+        creatures.add(new Gorapaduk());
 
         Collections.shuffle(creatures);
         return creatures.get(0);

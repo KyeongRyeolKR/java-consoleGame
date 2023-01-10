@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="461c338b-dccc-488e-934a-2ac8a0e26e71" name="Changes" comment="0109">
+    <list default="true" id="461c338b-dccc-488e-934a-2ac8a0e26e71" name="Changes" comment="0110">
+      <change afterPath="$PROJECT_DIR$/src/life/pokemon/Chicorita.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/life/pokemon/Ggomadol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/life/pokemon/Jammanbo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/life/pokemon/Peezon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/life/pokemon/Poorin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/life/pokemon/Yeesanghaesee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/ball/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/ball/Ball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/ball/HyperBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/ball/HyperBall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/ball/MasterBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/ball/MasterBall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/ball/MonsterBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/ball/MonsterBall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/ball/SuperBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/ball/SuperBall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/life/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/life/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/life/pokemon/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/life/pokemon/Type.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/PlayerServiceLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/PlayerServiceLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shop/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shop/Shop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/UserMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +58,9 @@
       <recent name="ball" />
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="life.pokemon" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -87,7 +87,7 @@
       <workItem from="1672901755145" duration="1868000" />
       <workItem from="1672903640726" duration="2499000" />
       <workItem from="1672906203936" duration="743000" />
-      <workItem from="1673021866066" duration="66123000" />
+      <workItem from="1673021866066" duration="67391000" />
     </task>
     <task id="LOCAL-00001" summary="테스트 1">
       <created>1673021892263</created>
@@ -131,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673191339273</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="0110">
+      <created>1673348667433</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673348667433</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +159,7 @@
     <MESSAGE value="테스트 1" />
     <MESSAGE value="0108" />
     <MESSAGE value="0109" />
-    <option name="LAST_COMMIT_MESSAGE" value="0109" />
+    <MESSAGE value="0110" />
+    <option name="LAST_COMMIT_MESSAGE" value="0110" />
   </component>
 </project>
