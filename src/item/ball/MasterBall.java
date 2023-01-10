@@ -7,6 +7,6 @@ public class MasterBall extends Ball{
         this(0);
     }
     public MasterBall(int quantity) {
-        super("마스터볼", quantity, 4000);
+        super("마스터볼", quantity, 4000, 100);
     }
 }

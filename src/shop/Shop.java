@@ -73,11 +73,11 @@ public class Shop {
         System.out.println();
         System.out.println("------------------- <<아이템샵>> -------------------");
         for(Ball ball : balls) {
-            System.out.printf("%d. %s, 가격 : %d\n", itemIndex, ball.getName(), ball.getPrice());
+            System.out.printf("%d. %s, 가격 : %d, 체력 %d 이하 포획 가능\n", itemIndex, ball.getName(), ball.getPrice(), ball.getCanCatch());
             itemIndex++;
         }
         for(Potion potion : potions){
-            System.out.printf("%d. %s, 가격 : %d\n", itemIndex, potion.getName(), potion.getPrice());
+            System.out.printf("%d. %s, 가격 : %d, 체력 회복량 : %d\n", itemIndex, potion.getName(), potion.getPrice(), potion.getIncreaseHp());
             itemIndex++;
         }
         System.out.println("0. 돌아가기");

@@ -9,7 +9,7 @@ public class MonsterBall extends Ball {
     }
 
     public MonsterBall(int quantity) {
-        super("몬스터볼", quantity, 1000);
+        super("몬스터볼", quantity, 1000, 30);
     }
 
     @Override

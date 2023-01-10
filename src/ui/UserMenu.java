@@ -68,13 +68,13 @@ public class UserMenu {
     private void displayMenu(){
         System.out.println("\n\n========================= 지우의 모험 =========================");
         System.out.println("1. 새로 시작하기");
-        System.out.println("2. 파일 불러오기");
+        System.out.println("2. 파일 불러오기  // 미구현");
         System.out.println("3. 내정보 보기");
         System.out.println("4. 상점");
         System.out.println("5. 포획하기");
         System.out.println("6. 다음 로켓단 상대하기");
         System.out.println("7. 휴식하기");
-        System.out.println("8. 저장하기");
+        System.out.println("8. 파일 저장하기  // 미구현");
         System.out.println("0. 종료하기");
         System.out.println("=============================================================");
     }

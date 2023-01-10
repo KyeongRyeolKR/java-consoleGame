@@ -89,30 +89,48 @@ public class PlayerServiceLogic implements PlayerService {
 
     @Override
     public void catchMon() {
-        int totalBallCount = 0;
-        for(Item item : getInventory().getItems()){
-            if(item instanceof Ball){
-                totalBallCount += item.getQuantity();
+        System.out.printf("\n\n            !! 주의 !!        \n");
+        System.out.printf("포획을 할 때 마다 지우의 체력이 10 감소합니다.\n\n");
+        if(getPlayer().getHp() > 0) {
+            int totalBallCount = 0;
+            for (Item item : getInventory().getItems()) {
+                if (item instanceof Ball) {
+                    totalBallCount += item.getQuantity();
+                }
             }
-        }
-        if(totalBallCount == 0){
-            System.out.println("보유하신 볼이 하나도 없습니다.");
-            System.out.println("상점에서 볼을 구매하세요.");
+            if (totalBallCount == 0) {
+                System.out.println("보유하신 볼이 하나도 없습니다.");
+                System.out.println("상점에서 볼을 구매하세요.");
+            } else {
+                System.out.println("보유하신 볼이 있습니다.");
+                Pokemon creature = searchCreature();
+                Pokemon myPokemon = selectPokemon();
+                fightWithCreature(creature, myPokemon);
+                getPlayer().setHp(getPlayer().getHp() - 10);
+            }
         } else {
-            System.out.println("보유하신 볼이 있습니다.");
-            Pokemon creature = searchCreature();
-            Pokemon myPokemon = selectPokemon();
-            fightWith(creature, myPokemon);
-            player.setHp(player.getHp() - 10);
+            System.out.println("지우의 체력이 0이여서 포획을 할 수 없습니다.");
+            System.out.println("체력을 회복해주세요.");
         }
     }
 
     @Override
     public void fight() {
-        Pokemon rocketdan = searchRocketdan();
-        Pokemon myPokemon = selectPokemon();
-        fightWith(rocketdan, myPokemon);
-        player.setHp(player.getHp() - 10);
+        System.out.printf("\n\n            !! 주의 !!        \n");
+        System.out.printf("전투를 할 때 마다 지우의 체력이 10 감소합니다.\n\n");
+        if(getPlayer().getHp() > 0) {
+            Pokemon rocketdan = searchRocketdan();
+            Pokemon myPokemon = selectPokemon();
+            fightWithRocketdan(rocketdan, myPokemon);
+            getPlayer().setHp(getPlayer().getHp() - 10);
+            if (getPlayer().getHp() < 30) {
+                System.out.println("지우의 체력이 얼마 남지 않았습니다.");
+                System.out.printf("체력을 회복해주세요. HP : %d\n", getPlayer().getHp());
+            }
+        } else {
+            System.out.println("지우의 체력이 0이여서 전투를 할 수 없습니다.");
+            System.out.println("체력을 회복해주세요.");
+        }
     }
 
     @Override
@@ -263,9 +281,9 @@ public class PlayerServiceLogic implements PlayerService {
         System.out.printf("체력 : %d, 타입 : %s\n\n", creature.getHp(), creature.getType());
         return creature;
     }
-    
+
     private Pokemon searchRocketdan(){
-        System.out.println("로켓단을 찾는 중");
+        System.out.print("로켓단을 찾는 중");
         Pokemon creature = randomCreature();
         try {
             for(int i=0; i<3; i++) {
@@ -280,7 +298,7 @@ public class PlayerServiceLogic implements PlayerService {
         return creature;
     }
 
-    private void fightWith(Pokemon creature, Pokemon myPokemon){
+    private void fightWithCreature(Pokemon creature, Pokemon myPokemon){
         System.out.println("------------------------------");
         System.out.println("1. 싸운다.");
         System.out.println("2. 도망간다.");
@@ -411,6 +429,104 @@ public class PlayerServiceLogic implements PlayerService {
                     System.out.printf("\n\n(상대) %s(이)가 죽었습니다.\n", creature.getName());
                 } else if(myPokemon.getHp() <= 0){
                     System.out.printf("\n\n(나) %s(이)가 죽었습니다.\n", myPokemon.getName());
+                }
+            }
+        } else if(menuNum == 2){
+            System.out.println("호 다 닥 !!");
+        } else {
+            System.out.println("잘못 입력하셨습니다.");
+        }
+    }
+
+
+    private void fightWithRocketdan(Pokemon rocketdan, Pokemon myPokemon){
+        System.out.println("------------------------------");
+        System.out.println("1. 싸운다.");
+        System.out.println("2. 도망간다.");
+        System.out.println("------------------------------");
+        int menuNum = scanner.nextInt();
+        if(menuNum == 1){
+            while(rocketdan.getHp() > 0 && myPokemon.getHp() > 0) {
+                System.out.println("\n\n1. 공격하기");
+                System.out.println("2. 회복하기");
+                System.out.println("3. 도망가기");
+                int selectNum = scanner.nextInt();
+                if(selectNum == 1){
+                    int creatureDamage = (int) (Math.random() * 30 + 1);
+                    // 공격하기
+                    System.out.println("\n\n------------------------------");
+                    System.out.println("사용할 스킬을 입력해주세요. ( 1 ~ 3 )");
+                    System.out.println("------------------------------");
+                    int selectSkill = scanner.nextInt();
+                    switch (selectSkill){
+                        case 1:
+                            myPokemon.skill1(rocketdan);
+                            System.out.printf("\n(상대) %s(이)가 %d만큼 데미지를 주었습니다.\n", rocketdan.getName(), creatureDamage);
+                            myPokemon.setHp(myPokemon.getHp() - creatureDamage);
+                            System.out.printf("(나) %s의 현재 체력 : %d\n", myPokemon.getName(), myPokemon.getHp());
+                            break;
+                        case 2:
+                            myPokemon.skill2(rocketdan);
+                            System.out.printf("\n(상대) %s(이)가 %d만큼 데미지를 주었습니다.\n", rocketdan.getName(), creatureDamage);
+                            myPokemon.setHp(myPokemon.getHp() - creatureDamage);
+                            System.out.printf("(나) %s의 현재 체력 : %d\n", myPokemon.getName(), myPokemon.getHp());
+                            break;
+                        case 3:
+                            myPokemon.skill3(rocketdan);
+                            System.out.printf("\n(상대) %s(이)가 %d만큼 데미지를 주었습니다.\n", rocketdan.getName(), creatureDamage);
+                            myPokemon.setHp(myPokemon.getHp() - creatureDamage);
+                            System.out.printf("(나) %s의 현재 체력 : %d\n", myPokemon.getName(), myPokemon.getHp());
+                            break;
+                    }
+                } else if(selectNum == 2){
+                    // 회복하기
+                    System.out.println("\n\n------------------------------");
+                    System.out.println("사용할 포션을 선택해주세요.");
+                    System.out.printf("1. %s x%d\n", getInventory().getItems().get(4).getName(), getInventory().getItems().get(4).getQuantity());
+                    System.out.printf("2. %s x%d\n", getInventory().getItems().get(5).getName(), getInventory().getItems().get(5).getQuantity());
+                    System.out.println("------------------------------");
+                    int selectNumber = scanner.nextInt();
+                    if(getInventory().getItems().get(selectNumber+3).getQuantity() == 0){
+                        System.out.printf("%s 개수 0개!! 상점에서 구매해주세요.\n", getInventory().getItems().get(3+selectNumber).getName());
+                    } else if(getInventory().getItems().get(selectNumber+3).getQuantity() != 0){
+                        if(selectNumber == 1){
+                            myPokemon.setHp(myPokemon.getHp() + 50);
+                            System.out.printf("(나) %s의 HP를 50 회복했습니다. HP : %d\n", myPokemon.getName(), myPokemon.getHp());
+                            getInventory().getItems().get(4).decreaseQuantity();
+                        } else if(selectNumber == 2){
+                            myPokemon.setHp(myPokemon.getHp() + 100);
+                            System.out.printf("(나) %s의 HP를 100 회복했습니다. HP : %d\n", myPokemon.getName(), myPokemon.getHp());
+                            getInventory().getItems().get(5).decreaseQuantity();
+                        } else {
+                            System.out.println("잘못 입력하셨습니다.");
+                        }
+                    }
+                } else if(selectNum == 3){
+                    // 도망가기
+                    System.out.println("호 다 닥 !!");
+                    return;
+                } else {
+                    System.out.println("잘못 입력하셨습니다.");
+                }
+                if(rocketdan.getHp() <= 0){
+                    int randomReward = (int)(Math.random() * 5000 + 5000);
+                    System.out.printf("\n\n(상대) %s(이)가 죽었습니다.\n", rocketdan.getName());
+                    System.out.printf("\n\n                 << 전투 결과 >>                 \n");
+                    System.out.printf("          로켓단과의 전투에서 승리하였습니다!!\n\n");
+                    System.out.printf("\n\n------------ 내 포켓몬 상태 ------------\n");
+                    System.out.printf("    %s    |    %d    \n", myPokemon.getName(), myPokemon.getHp());
+                    System.out.printf("--------------------------------------\n\n");
+                    System.out.printf("\n\n------------ 획득 보상 목록 ------------\n");
+                    System.out.printf("1. 머니 : %d\n", randomReward);
+                    getPlayer().setMoney(getPlayer().getMoney() + randomReward);
+                    System.out.printf("--------------------------------------\n\n");
+                } else if(myPokemon.getHp() <= 0){
+                    System.out.printf("\n\n(나) %s(이)가 죽었습니다.\n", myPokemon.getName());
+                    System.out.printf("\n\n                 << 전투 결과 >>                 \n");
+                    System.out.printf("          로켓단과의 전투에서 패배하였습니다..\n\n");
+                    System.out.printf("\n\n------------ 내 포켓몬 상태 ------------\n");
+                    System.out.printf("    %s    |    %d    \n", myPokemon.getName(), myPokemon.getHp());
+                    System.out.printf("--------------------------------------\n\n");
                 }
             }
         } else if(menuNum == 2){

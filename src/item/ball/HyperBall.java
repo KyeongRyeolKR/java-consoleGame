@@ -8,6 +8,6 @@ public class HyperBall extends Ball{
         this(0);
     }
     public HyperBall(int quantity) {
-        super("하이퍼볼", quantity, 3000);
+        super("하이퍼볼", quantity, 3000, 50);
     }
 }

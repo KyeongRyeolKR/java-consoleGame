@@ -13,8 +13,8 @@ public class Player {
 
     private Player(){
         this.name = "지우";
-        this.hp = 50;
-        this.money = 10000;
+        this.hp = 100;
+        this.money = 0;
     }
 
     public static Player getInstance(){
@@ -41,8 +41,12 @@ public class Player {
 
     public void setHp(int hp) {
         if(hp > 100){
-            System.out.println("HP는 최대 100을 넘을 수 없습니다.");
+            System.out.println("HP는 최대 100 을 넘을 수 없습니다.");
             setHp(100);
+        } else if(hp <= 0){
+            System.out.println("HP가 0 이여서 포획 및 전투를 할 수 없습니다.");
+            System.out.println("체력을 회복해주세요.\n");
+            setHp(0);
         } else {
             this.hp = hp;
         }
