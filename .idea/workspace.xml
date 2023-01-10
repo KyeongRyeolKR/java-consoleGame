@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="461c338b-dccc-488e-934a-2ac8a0e26e71" name="Changes" comment="0110">
-      <change afterPath="$PROJECT_DIR$/src/life/pokemon/Chicorita.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/life/pokemon/Ggomadol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/life/pokemon/Jammanbo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/life/pokemon/Peezon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/life/pokemon/Poorin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/life/pokemon/Yeesanghaesee.java" afterDir="false" />
+    <list default="true" id="461c338b-dccc-488e-934a-2ac8a0e26e71" name="Changes" comment="0110&#10;포켓몬 추가&#10;- 이상해씨&#10;- 피존&#10;- 푸린&#10;- 꼬마돌&#10;- 치코리타&#10;- 잠만보&#10;- 고라파덕">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/life/pokemon/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/life/pokemon/Type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/PlayerServiceLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/PlayerServiceLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/ball/HyperBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/ball/HyperBall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/ball/SuperBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/ball/SuperBall.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +81,7 @@
       <workItem from="1672901755145" duration="1868000" />
       <workItem from="1672903640726" duration="2499000" />
       <workItem from="1672906203936" duration="743000" />
-      <workItem from="1673021866066" duration="67391000" />
+      <workItem from="1673021866066" duration="68050000" />
     </task>
     <task id="LOCAL-00001" summary="테스트 1">
       <created>1673021892263</created>
@@ -138,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673348667433</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="0110&#10;포켓몬 추가&#10;- 이상해씨&#10;- 피존&#10;- 푸린&#10;- 꼬마돌&#10;- 치코리타&#10;- 잠만보&#10;- 고라파덕">
+      <created>1673350048092</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673350048092</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +161,7 @@
     <MESSAGE value="0108" />
     <MESSAGE value="0109" />
     <MESSAGE value="0110" />
-    <option name="LAST_COMMIT_MESSAGE" value="0110" />
+    <MESSAGE value="0110&#10;포켓몬 추가&#10;- 이상해씨&#10;- 피존&#10;- 푸린&#10;- 꼬마돌&#10;- 치코리타&#10;- 잠만보&#10;- 고라파덕" />
+    <option name="LAST_COMMIT_MESSAGE" value="0110&#10;포켓몬 추가&#10;- 이상해씨&#10;- 피존&#10;- 푸린&#10;- 꼬마돌&#10;- 치코리타&#10;- 잠만보&#10;- 고라파덕" />
   </component>
 </project>
