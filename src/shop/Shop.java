@@ -35,7 +35,7 @@ public class Shop {
                 break;
             } else {
                 String yesOrNo = "";
-                System.out.printf("%s를 구매하시겠습니까?( Y / N )", inventory.getItems().get(selectNumber - 1).getName());
+                System.out.printf("%s를 구매하시겠습니까?( Y / N ) ", inventory.getItems().get(selectNumber - 1).getName());
                 yesOrNo = scanner.nextLine();
                 if (yesOrNo.toLowerCase().equals("y")) {
                     if(player.getMoney() < inventory.getItems().get(selectNumber - 1).getPrice()){
@@ -48,6 +48,8 @@ public class Shop {
                     }
                 } else if (yesOrNo.toLowerCase().equals("n")) {
                     System.out.println("구매를 취소하셨습니다.");
+                } else {
+                    System.out.println("잘못 입력하셨습니다.");
                 }
             }
         }

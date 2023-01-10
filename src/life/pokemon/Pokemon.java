@@ -1,6 +1,8 @@
 package life.pokemon;
 
-public class Pokemon implements Skill{
+import java.io.Serializable;
+
+public class Pokemon implements Skill {
     private String name;
     private int hp;
     private Type type;
@@ -24,7 +26,13 @@ public class Pokemon implements Skill{
     }
 
     public void setHp(int hp) {
-        this.hp = hp;
+        if(hp < 0) {
+            setHp(0);
+        } else if(hp > 100){
+            setHp(100);
+        } else {
+            this.hp = hp;
+        }
     }
 
     public Type getType() {

@@ -66,9 +66,7 @@ public class UserMenu {
         }
     }
     private void displayMenu(){
-        System.out.println();
-        System.out.println();
-        System.out.println("========================= 지우의 모험 =========================");
+        System.out.println("\n\n========================= 지우의 모험 =========================");
         System.out.println("1. 새로 시작하기");
         System.out.println("2. 파일 불러오기");
         System.out.println("3. 내정보 보기");

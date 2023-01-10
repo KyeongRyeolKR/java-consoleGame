@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="461c338b-dccc-488e-934a-2ac8a0e26e71" name="Changes" comment="0108">
+    <list default="true" id="461c338b-dccc-488e-934a-2ac8a0e26e71" name="Changes" comment="0109">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/inventory/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inventory/Inventory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/ball/HyperBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/ball/HyperBall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/ball/MasterBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/ball/MasterBall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/ball/MonsterBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/ball/MonsterBall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/ball/SuperBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/ball/SuperBall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/potion/Elixir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/potion/Elixir.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/item/potion/PowerElixir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/potion/PowerElixir.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/life/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/life/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/life/pokemon/Ggobugi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/life/pokemon/Ggobugi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/life/pokemon/Pikachu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/life/pokemon/Pikachu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/life/pokemon/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/life/pokemon/Pokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/life/pokemon/Pyree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/life/pokemon/Pyree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/PlayerServiceLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/PlayerServiceLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shop/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shop/Shop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/UserMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +48,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/owner/Desktop/KR/STUDY/JAVA/Namusori",
+    "last_opened_file_path": "C:/Users/owner/Desktop/KR/DEVELOPE/java-consoleGame",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -87,7 +88,7 @@
       <workItem from="1672901755145" duration="1868000" />
       <workItem from="1672903640726" duration="2499000" />
       <workItem from="1672906203936" duration="743000" />
-      <workItem from="1673021866066" duration="38254000" />
+      <workItem from="1673021866066" duration="61238000" />
     </task>
     <task id="LOCAL-00001" summary="테스트 1">
       <created>1673021892263</created>
@@ -117,7 +118,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673178085468</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="0108">
+      <created>1673191211808</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673191211808</updated>
+    </task>
+    <task id="LOCAL-00006" summary="0109">
+      <created>1673191339273</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673191339273</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +152,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="테스트 1" />
     <MESSAGE value="0108" />
-    <option name="LAST_COMMIT_MESSAGE" value="0108" />
+    <MESSAGE value="0109" />
+    <option name="LAST_COMMIT_MESSAGE" value="0109" />
   </component>
 </project>

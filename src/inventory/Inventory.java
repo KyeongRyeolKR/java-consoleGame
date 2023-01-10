@@ -9,6 +9,7 @@ import item.potion.Elixir;
 import item.potion.PowerElixir;
 import life.pokemon.Pokemon;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class Inventory {
     private List<Item> items;
     private List<Pokemon> pokemons;
 
-    public Inventory(){
+    private Inventory(){
         this.items = new ArrayList<>();
         this.pokemons = new ArrayList<>();
         initializeInventory();

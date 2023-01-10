@@ -2,15 +2,16 @@ package life.player;
 
 import inventory.Inventory;
 
+import java.io.Serializable;
+
 // 테스트 1
 public class Player {
     private static Player playerInstance;
     private String name;
     private int hp;
     private int money;
-    private Inventory inventory = Inventory.getInstance();
 
-    public Player(){
+    private Player(){
         this.name = "지우";
         this.hp = 50;
         this.money = 10000;
@@ -23,6 +24,9 @@ public class Player {
         return playerInstance;
     }
 
+    public static void loadGame(){
+
+    }
     public String getName() {
         return name;
     }

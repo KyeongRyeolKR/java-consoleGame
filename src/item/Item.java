@@ -1,6 +1,8 @@
 package item;
 
-public abstract class Item {
+import java.io.Serializable;
+
+public abstract class Item implements Serializable {
     private String name;
     private int quantity;
     private int price;
@@ -17,6 +19,9 @@ public abstract class Item {
 
     public int getQuantity() {
         return quantity;
+    }
+
+    public void setQuantity(int quantity) {
     }
 
     public void increaseQuantity() {
